@@ -1,0 +1,21 @@
+name: workshop
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - jupyterlab
+  - tqdm
+  - requests
+  - nodejs
+  - ipywidgets
+  - ipyleaflet
+  - pandas
+  - geopandas
+  - osmnx
+  - xlrd
+  - pip
+  - pip:
+    - bqplot
+    - bokeh
+    - matplotlib
