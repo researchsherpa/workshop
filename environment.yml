@@ -8,15 +8,15 @@ dependencies:
   - tqdm
   - requests
   - nodejs
-  - ipywidgets
-  - ipyleaflet
-  - pandas
-  - geopandas
-  - osmnx
-  - xlrd
-  - qgrid
   - pip
   - pip:
     - bqplot
     - bokeh
     - matplotlib
+    - ipywidgets
+    - ipyleaflet
+    - pandas
+    - geopandas
+    - osmnx
+    - xlrd
+    - qgrid
