@@ -1,2 +1,0 @@
-jupyter labextension install qgrid2 --minimize=False
-
