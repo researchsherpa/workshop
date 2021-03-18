@@ -1,2 +1,2 @@
-jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet bqplot qgrid2  --minimize=False
-jupyter labextension build
+jupyter labextension install qgrid2 --minimize=False
+
