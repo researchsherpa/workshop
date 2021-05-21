@@ -4,7 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.8
-  - jupyterlab
+  - jupyterlab=3
   - tqdm
   - requests
   - nodejs
@@ -20,3 +20,6 @@ dependencies:
     - osmnx
     - xlrd
     - qgrid
+    - openpyxl
+    - pyproj
+    - Shapely

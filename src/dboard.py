@@ -4,7 +4,7 @@ import json
 import sys
 
 import requests
-from tqdm import tqdm
+from tqdm import tqdm, tqdm_notebook
 
 import pandas as pd
 import geopandas as gpd
@@ -58,13 +58,13 @@ class MapDisplay:
 
         self.map_display.add_control(LayersControl())
 
-    def add_layer(self, gdf, name, key):
+    def add_dboard_layer(self, gdf, name, key, key2):
 
         business = list()
-        for i, r in tqdm(gdf.iterrows()):
+        for i, r in tqdm_notebook(gdf.iterrows()):
             marker = CircleMarker(location=(r.geometry.y, r.geometry.x), radius=5, stroke=False, fill_color="blue", fill_opacity=1.0)
             msg = HTML()
-            msg.value = f"{r[key]}"
+            msg.value = f"{r[key]}<br>{r[key2]}"
             marker.popup = msg
             business.append(marker)
             gdf['marker'] = marker
@@ -77,7 +77,7 @@ class MapDisplay:
     def add_bids(self, gdf):
 
         bids = GeoData(geo_dataframe = gdf,
-                   style={'color': 'black', 'fillColor': '#3366cc', 'opacity':0.05, 'weight':1.9, 'dashArray':'2', 'fillOpacity':0.6},
+                   style={'color': 'black', 'fillColor': "#cd34b5", 'opacity':0.05, 'weight':1.0, 'dashArray':'2', 'fillOpacity':0.4},
                    hover_style={'fillColor': 'red' , 'fillOpacity': 0.2},
                    name = 'BIDs')
 
