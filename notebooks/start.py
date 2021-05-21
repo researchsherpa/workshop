@@ -29,12 +29,12 @@ plt.style.use('bmh')
 
 from IPython.display import IFrame, Markdown
 
-from ipywidgets import Layout, HTML, Text, interact
+from ipywidgets import Layout, HTML, Text, interact, Output, HBox
 
 from ipyleaflet import (Map, Rectangle, GeoJSON,
                         MarkerCluster, GeoData, LayersControl,
                         LayerGroup, Marker, WidgetControl,
-                        CircleMarker,
+                        CircleMarker, LegendControl,
                        basemaps, basemap_to_tiles)
 
 from bqplot import pyplot as plt
